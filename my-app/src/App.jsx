@@ -1,4 +1,9 @@
 import { useState } from 'react'
+
+import MovieForm from "./components/MovieForm/MovieForm";
+import MovieList from "./components/MovieList/MovieList";
+import SortButton from "./components/SortButton/SortButton";
+
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
