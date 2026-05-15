@@ -1,5 +1,4 @@
-import MovieItem from '../components/MovieItem'
-
+import MovieItem from '../MovieItem/MovieItem'
 
 
 
