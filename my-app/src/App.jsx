@@ -9,11 +9,20 @@ import './App.css'
 function App() {
   const [movies, setMovies] = useState([])
 
+
+function deleteMovie(id) {
+  setMovies(prev =>
+    //Tar den gamla listan och tar bort filmen med rätt id, och ersätt state med den nya listan”
+    prev.filter(movie => movie.id !== id)
+  );
+}
+
   return (
         <div className="MovieContainer">
           <h1>Min filmlista</h1>
           <MovieForm />
           
+          <MovieList movies={movies} onDelete={deleteMovie}/>
         </div>
   );
 }
