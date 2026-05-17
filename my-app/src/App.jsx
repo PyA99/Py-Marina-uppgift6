@@ -9,6 +9,12 @@ import './App.css'
 function App() {
   const [movies, setMovies] = useState([])
 
+// Vi skapar en ny array med tidigare filmer och lägger till den nya filmen sist i arrayen. 
+function addMovie(movie){
+  console.log(movie)
+  setMovies(currentMovies => [...currentMovies, movie]);
+}
+
 
 function deleteMovie(id) {
   setMovies(prev =>
@@ -20,7 +26,7 @@ function deleteMovie(id) {
   return (
         <div className="MovieContainer">
           <h1>Min filmlista</h1>
-          <MovieForm />
+          <MovieForm saveMovieToList={addMovie}/>
           
           <MovieList movies={movies} onDelete={deleteMovie}/>
         </div>

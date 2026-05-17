@@ -3,17 +3,23 @@
 import { useState } from "react";
 import "./MovieForm.css";
 
-function MovieForm() {
-    
+function MovieForm( {saveMovieToList} ) {
     const [movieTitel, setMovieTitel ] = useState("");
     const [gradeMovie, setGradeMovie] = useState("0");
 
     
-    function handleSubmit() {
+    function handleSubmit(e) {
+        console.log("submit fungear");
+        e.preventDefault();
         
         if(movieTitel === "" || gradeMovie === "0"){
             alert("Ange en filmtitel och betyg!")
         } else {
+            saveMovieToList({
+                id: Date.now(), //Vi skapar ett id till filmen som lagts till genom datum och milisekunder som blir till en sträng. 
+                title: movieTitel,
+                rating: gradeMovie
+            });
             alert("Filmen har lagts till!")
             return;
         }
