@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import MovieForm from "./Components/MovieForm/MovieForm";
 import MovieList from "./Components/MovieList/MovieList";
-//import SortButton from "./Components/SortButton/SortButton";
+import SortButton from "./Components/SortButton/SortButton";
 
 import './App.css'
 
@@ -23,12 +23,30 @@ function deleteMovie(id) {
   );
 }
 
+function sortMovies(type) {
+  const sortedMovies = [...movies]; //skapar en kopia av filmlistan
+
+  if (type === "title") {
+    sortedMovies.sort((a, b) =>  //jämnför två filmer åt gången
+      a.title.localeCompare(b.title) //localeCompare jämnför alfabetiskt
+    );
+  }
+
+  if (type === "rating") {
+    sortedMovies.sort((a, b) =>
+      b.rating - a.rating //b - a gör att ordningen startar på högsta värdet
+    );
+  }
+
+  setMovies(sortedMovies);
+}
+
   return (
         <div className="MovieContainer">
           <h1>Min filmlista</h1>
           <hr></hr>
           <MovieForm saveMovieToList={addMovie}/>
-      
+          <SortButton onSort={sortMovies}/>
           <MovieList movies={movies} onDelete={deleteMovie}/>
         </div>
   );

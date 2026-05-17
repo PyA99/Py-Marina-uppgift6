@@ -1,4 +1,4 @@
-function SortButton ({ movies }) {
+function SortButton ({ onSort }) {
     return (
         <div>
             <button onClick={() => onSort("rating")}>Sortera efter betyg</button>
