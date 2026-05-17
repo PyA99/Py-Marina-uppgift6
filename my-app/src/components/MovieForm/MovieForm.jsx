@@ -20,6 +20,8 @@ function MovieForm( {saveMovieToList} ) {
                 title: movieTitel,
                 rating: gradeMovie
             });
+            setMovieTitel("");
+            setGradeMovie("0");
             alert("Filmen har lagts till!")
             return;
         }
@@ -27,7 +29,7 @@ function MovieForm( {saveMovieToList} ) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="movie-form" onSubmit={handleSubmit}>
             <input 
                id="movie-titel" //vi använder detta id till vår css. 
                type="text"  //här anger vi vilken typ av input det är.
@@ -41,6 +43,7 @@ function MovieForm( {saveMovieToList} ) {
                 type="number"
                 onChange={e => setGradeMovie(e.target.value)}
                 value={gradeMovie}
+                
             >
                 <option value="0">Ange betyg...</option>
                 <option value="1">1</option>
@@ -50,7 +53,7 @@ function MovieForm( {saveMovieToList} ) {
                 <option value="5">5</option>
             </select>    
 
-            <button type="submit">Spara film</button>
+            <button className="save-button" type="submit">Spara film</button>
 
         </form>
      

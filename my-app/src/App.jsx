@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-import MovieForm from "./components/MovieForm/MovieForm";
-import MovieList from "./components/MovieList/MovieList";
-//import SortButton from "./components/SortButton/SortButton";
+import MovieForm from "./Components/MovieForm/MovieForm";
+import MovieList from "./Components/MovieList/MovieList";
+//import SortButton from "./Components/SortButton/SortButton";
 
 import './App.css'
 
@@ -26,8 +26,9 @@ function deleteMovie(id) {
   return (
         <div className="MovieContainer">
           <h1>Min filmlista</h1>
+          <hr></hr>
           <MovieForm saveMovieToList={addMovie}/>
-          
+      
           <MovieList movies={movies} onDelete={deleteMovie}/>
         </div>
   );

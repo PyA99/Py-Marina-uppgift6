@@ -1,0 +1,30 @@
+.movie-form{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3px;
+}
+
+.movie-form input{
+    width: 30%;
+    height: 25px;
+}
+
+
+#movie-grade {
+    width: 30%;
+    height: 30px;
+    cursor: pointer;
+} 
+
+.save-button{
+    background-color: rgb(114, 218, 127);
+    color: rgb(255, 255, 255);
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: rgb(137, 220, 148);
+    cursor: pointer;
+}
