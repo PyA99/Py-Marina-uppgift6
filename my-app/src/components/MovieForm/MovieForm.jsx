@@ -20,7 +20,7 @@ function MovieForm( {saveMovieToList} ) {
                 title: movieTitel,
                 rating: gradeMovie
             });
-            setMovieTitel("");
+            setMovieTitel("");  //här nollställer vi fälten efter filmen lagts till.
             setGradeMovie("0");
             alert("Filmen har lagts till!")
             return;
