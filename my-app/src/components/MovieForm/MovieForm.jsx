@@ -30,6 +30,7 @@ function MovieForm( {saveMovieToList} ) {
 
     return (
         <form className="movie-form" onSubmit={handleSubmit}>
+            <label for="movie-titel">Titel:</label> 
             <input 
                id="movie-titel" //vi använder detta id till vår css. 
                type="text"  //här anger vi vilken typ av input det är.
@@ -37,7 +38,8 @@ function MovieForm( {saveMovieToList} ) {
                value={movieTitel}
                placeholder="Ange film titel..."
             />
-
+            
+            <label for="movie-grade">Betyg:</label>
             <select
                 id="movie-grade"
                 type="number"
@@ -45,6 +47,7 @@ function MovieForm( {saveMovieToList} ) {
                 value={gradeMovie}
                 
             >
+                
                 <option value="0">Ange betyg...</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
