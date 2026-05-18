@@ -1,19 +1,23 @@
 .movie-form{
     padding: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 3px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 35%;
+    margin: auto;
 }
 
-.movie-form input{
-    width: 30%;
+.movie-form input {
+    width: 100%;
     height: 25px;
 }
 
 
 #movie-grade {
-    width: 30%;
+    width: 100%;
     height: 30px;
     cursor: pointer;
 } 
@@ -21,10 +25,16 @@
 .save-button{
     background-color: rgb(114, 218, 127);
     color: rgb(255, 255, 255);
-    width: 100px;
+    width: 90px;
     height: 30px;
     font-weight: bold;
     border-radius: 5px;
     border-color: rgb(137, 220, 148);
     cursor: pointer;
+    align-self: flex-start;
+}
+
+label{
+    font-weight: bold;
+    align-self: flex-start;
 }

@@ -44,6 +44,7 @@ function sortMovies(type) {
   return (
         <div className="MovieContainer">
           <h1>Min filmlista</h1>
+          <h2> Lägg till en film </h2>
           <hr></hr>
           <MovieForm saveMovieToList={addMovie}/>
           <SortButton onSort={sortMovies}/>
