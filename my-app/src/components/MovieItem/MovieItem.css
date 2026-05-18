@@ -1,0 +1,42 @@
+.movie-card{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(244, 239, 239);
+    border-radius: 7px;
+    margin: 4px;
+}
+
+.stars{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.stars img{
+    width: 30px;
+    height: auto;
+}
+
+.movie-card button img{
+    width: 55px;
+    height: auto;
+    background: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.movie-card button{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 7px;
+}
+
+.movie-card > h2{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 7px;
+}
+
+
+

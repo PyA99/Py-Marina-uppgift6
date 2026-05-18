@@ -1,4 +1,5 @@
 import MovieItem from "../MovieItem/MovieItem";
+import "./MovieList.css";
 
 function MovieList({ movies, onDelete }) {
   const items = [];
@@ -14,7 +15,12 @@ function MovieList({ movies, onDelete }) {
     );
   }
 
-  return <div>{items}</div>;
+  return(
+    <div className="movie-list">
+      <h2>Inlagda filmer</h2>
+      <div>{items}</div>;
+    </div>
+  );
 }
 
 export default MovieList;

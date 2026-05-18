@@ -1,5 +1,6 @@
 import starIcon from "../../assets/star.png";
 import deleteIcon from "../../assets/delete.png";
+import "./MovieItem.css";
 
 function MovieItem({ movie, onDelete }) {
     const stars = [];
